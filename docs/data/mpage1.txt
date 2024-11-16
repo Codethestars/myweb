@@ -1,0 +1,27 @@
+OCCUPANCY CATEGORY|EXHAUST RATE (CFM/unit)|EXHAUST RATE (CFM/sq ft)|AIR CLASS
+Arenas|-|0.50|1
+Art classrooms|-|0.70|2
+Auto repair rooms|-|1.50|2
+Barber shops|-|0.50|2
+Bathroom|20/50|-|2
+Beauty and nail salons|-|0.60|2
+Cells with toilet|-|1.00|2
+Copy, printing rooms|-|0.50|2
+Darkrooms|-|1.00|2
+Educational science laboratories|-|1.00|2
+Janitor closets, trash rooms, recycling|-|1.00|3
+Kitchens – commercial|-|0.70|2
+Kitchenettes|-|0.30|2
+Locker rooms for athletic, industrial and health care facilities|-|0.50|2
+Other locker rooms|-|0.25|2
+Shower rooms|20/50|-|2
+Paint spray booths|-|-|4
+Parking garages|-|0.75|2
+Pet shops (animal areas)|-|0.90|2
+Refrigerating machinery rooms|-|-|3
+Residential – kitchens|50/100|-|2
+Soiled laundry storage rooms|-|1.00|3
+Storage rooms, chemical|-|1.50|4
+Toilets – private|25/50|-|2
+Toilets – public|50/70|-|2
+Woodwork shop/classrooms|-|0.50|2

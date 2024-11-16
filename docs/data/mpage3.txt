@@ -1,0 +1,79 @@
+OCCUPANCY CATEGORY|PEOPLE OUTDOOR Air Rate Rp (CFM/person)|AREA OUTDOOR Air Rate Ra (CFM/sq ft)|DEFAULT OCCUPANT DENSITY3 (people/1000 sq ft)|AIR CLASS
+CORRECTIONAL FACILITIES Booking/waiting|7.5|0.06|50|2
+CORRECTIONAL FACILITIES Cell|5|0.12|25|2
+CORRECTIONAL FACILITIES Day room|5|0.06|30|1
+CORRECTIONAL FACILITIES Guard stations|5|0.06|15|1
+EDUCATIONAL FACILITIES Art  classroom|10|0.18|150|2
+EDUCATIONAL FACILITIES Classrooms (ages 5-8)|10|0.18|25|2
+EDUCATIONAL FACILITIES Classrooms (ages 9 plus)|10|0.18|25|2
+EDUCATIONAL FACILITIES Computer lab|10|0.12|25|1
+EDUCATIONAL FACILITIES Daycare (through age 4)|10|0.06|35|1
+EDUCATIONAL FACILITIES Daycare sickroom|10|0.06|25|1
+EDUCATIONAL FACILITIES Lecture classroom|10|0.12|25|2
+EDUCATIONAL FACILITIES Lecture hall (fixed seats)|7.5|0.18|65|2
+EDUCATIONAL FACILITIES Media center|10|0.18|150|2
+EDUCATIONAL FACILITIES Multipurpose assembly|7.5|0.12|30|2
+EDUCATIONAL FACILITIES Music/theater/dance||0.18|25|2
+EDUCATIONAL FACILITIES Science laboratories|10|0.06|100|1
+EDUCATIONAL FACILITIES  University College laboratories|10|0.18|25|2
+EDUCATIONAL FACILITIES Wood/metal shop|10|0.18|20|2
+FOOD AND BEVERAGES SERVICE Bars, cocktail lounges|7.5|0.18|100|2
+FOOD AND BEVERAGES SERVICE Cafeteria/fast food dining|7.5|1.18|25|1
+FOOD AND BEVERAGES SERVICE Kitchen (cooking)|7.5|0.18|25|1
+FOOD AND BEVERAGES SERVICE Restaurant dining rooms|7.5|0.18|70|2
+GENERAL Break Rooms|5|0.06|120|2
+GENERAL Coffee stations|5|0.12|100|1
+GENERAL Conference/meeting|5|0.12|20|1
+GENERAL Corridors|-|0.06|70|2
+GENERAL Occupiable storage rooms for liquids or gels|5|0.12|10|1
+HOTELS, MOTELS, RESORTS, DORMITORIES Barracks sleeping areas|5|0.06|25|2
+HOTELS, MOTELS, RESORTS, DORMITORIES Bedroom/living room|5|0.06|20|2
+HOTELS, MOTELS, RESORTS, DORMITORIES Laundry rooms, central|5|0.06|50|1
+HOTELS, MOTELS, RESORTS, DORMITORIES Laundry rooms within dwelling units|5|0.06|10|1
+HOTELS, MOTELS, RESORTS, DORMITORIES Lobbies/pre-function|7.5|0.06|10|1
+HOTELS, MOTELS, RESORTS, DORMITORIES  Multipurpose assembly|7.5|0.06|30|1
+OFFICE BUILDINGS Break rooms|5|0.18|100|1
+OFFICE BUILDINGS Main entry lobbies|5|0.06|50|1
+OFFICE BUILDINGS Occupieable storage rooms for dry materials|5|0.06|2|1
+OFFICE BUILDINGS Office space|5|0.06|2|1
+OFFICE BUILDINGS Reception areas|5|0.06|5|1
+OFFICE BUILDINGS Telephone/data entry|5|0.06|60|1
+MISC SPACES Bank or bank lobbies|7.5|0.06|60|1
+MISC SPACES Bank vaults/safe deposit|5|0.06|15|1
+MISC SPACES Computer (not printing)|5|0.06|5|2
+MISC SPACES Freezer and refrigerated spaces < 50F|10|0.06|4|1
+MISC SPACES General manufacturing (excludes heavy industrial and processes using chemicals)|10|0.18|7|1
+MISC SPACES Pharmacy (prep. area)|5|0.18|10|2
+MISC SPACES Photo studios|5|0.12|10|2
+MISC SPACES Shipping/Receiving|10|0.12|2|2
+MISC SPACES Sorting, packing, light assembly|7.5|0.12|7|2
+MISC SPACES Telephone closets|-|-|-|1
+MISC SPACES Transportation waiting|7.5|0.06|100|I
+MISC SPACES Warehouses|10|0.06|-|2
+PUBLIC ASSEMBLY Auditorium seating area|5|0.06|150|1
+PUBLIC ASSEMBLY  Courtrooms|5|0.06|70|1
+PUBLIC ASSEMBLY  Legislative chambers|5|0.06|50|1
+PUBLIC ASSEMBLY  Libraries|5|0.12|10|1
+PUBLIC ASSEMBLY  Lobbies|5|0.06|150|1
+PUBLIC ASSEMBLY  Museums (children's)|7.5|0.12|40|1
+PUBLIC ASSEMBLY  Museums/galleries|7.5|0.06|40|1
+PUBLIC ASSEMBLY  Places of religious worship|5|0.06|120|1
+RESIDENTIAL Common corridors|-|0.06|-|1
+RESIDENTIAL Dwelling unit|5|0.06|See footnote|1
+RETAIL Sales (except as below)|7.5|0.12|15|2
+RETAIL Barber shop|7.5|0.06|25|2
+RETAIL Beauty and nail salons|20|0.12|25|2
+RETAIL Coin-operated laundries|7.5|0.12|20|1
+RETAIL Mall common areas|7.5|0.06|40|2
+RETAIL Pet shops (animal areas)|7.5|0.18|10|1
+RETAIL Supermarket|7.5|0.06|8|1
+SPORTS & ENTERTAINMENT Bowling alley (seating)|10|0.12|40|1
+SPORTS & ENTERTAINMENT Disco/dance floors|20|0.06|100|2
+SPORTS & ENTERTAINMENT Gambling casinos|7.5|0.18|120|1
+SPORTS & ENTERTAINMENT Game arcades|7.5|0.18|20|1
+SPORTS & ENTERTAINMENT Gym, sports arena (play area)|20|0.18|7|2
+SPORTS & ENTERTAINMENT Health club/aerobics room|20|0.06|40|2
+SPORTS & ENTERTAINMENT Health club/weight rooms|20|0.06|10|2
+SPORTS & ENTERTAINMENT Spectator areas|7.5|0.06|150|1
+SPORTS & ENTERTAINMENT Stages, studios|10|0.06|70|1
+SPORTS & ENTERTAINMENT Swimming (pool & deck)|-|0.48|-|2

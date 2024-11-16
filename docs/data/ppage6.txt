@@ -1,0 +1,4 @@
+Material|Coefficient of Expansion, C|Total Expansion or Contraction, in./100 ft
+Steel|6.5E-6|0.62
+Copper|9.5E-6|0.91
+Brass|10.4E-6|1.00

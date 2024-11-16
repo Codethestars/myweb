@@ -1,0 +1,7 @@
+AREA DESIGNATION|MINIMUM NUMBER OF FILTER BANKS|FILTER BANK 1|FILTER BANK 2|FILTER BANK 3
+Orthopedic operating room, bone marrow transplant operating room, organ transplant operating room, NICU formula preparation room, NICU treatment area/room.|3|30% MERV 8|90% MERV 14|99.97% MERV 17
+Protective environment rooms.|3|30% MERV 8|90% MERV 14|99.97% MERV 17
+Angiography; cardiac catheterization labs; operating rooms; interventional imaging procedure rooms; delivery rooms nursery; patient care, treatment, cystoscopy, cesarean operating room, diagnostic, and related areas; airborne infection isolation rooms; areas providing direct patient service or clean supplies such as sterile and clean processes, and patient area corridors|2|30% MERV 8|90% MERV 14|-
+Laboratories|2|30% MERV 8|80% MERV 13|-
+Administrative, med staff support areas, bulk storage, soiled holding areas, food preparation areas, public cafeterias, and laundries|1|30% MERV 8|-|-
+Psychiatric hospitals intended for the care and treatment of inpatients who do not require acute medical services|1|30% MERV 8|-|-
