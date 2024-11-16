@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Plumbing System Data</title>
+    <style>
+        :root {
+            --primary-dark: #5C4033;
+            --grid-color: rgba(11, 53, 87, 0.08);
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+        
+        .container {
+            width: 960px;
+            height: 720px;
+            background-color: #f5f1e8;
+            box-shadow: 0 0 20px rgba(0,0,0,0.15);
+            background-image: 
+                linear-gradient(var(--grid-color) 1px, transparent 1px),
+                linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
+            background-size: 20px 20px;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .header {
+            background: linear-gradient(90deg, #5C4033, #7B3F00, #B87333);
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header-title {
+            font-size: 1.4rem;
+            margin: 0;
+        }
+
+        .header-nav {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .header-nav a {
+            color: white;
+            text-decoration: none;
+            position: relative;
+            padding: 5px 0;
+        }
+
+        .header-nav a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: white;
+            transition: width 0.3s ease;
+        }
+
+        .header-nav a:hover::after {
+            width: 100%;
+        }
+
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            align-items: center;
+            justify-content: center;
+            flex-grow: 1;
+            width: 100%;
+            padding: 20px;
+        }
+
+        .plumbing-button {
+            width: 300px;
+            height: 70px;
+            background-color: #1a4875;
+            color: white;
+            font-size: 1.25rem;
+            font-weight: bold;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s ease-in-out;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .plumbing-button:hover {
+            background-color: #2a5885;
+            transform: translateY(-5px);
+        }
+
+        .footer {
+            background: linear-gradient(90deg, #5C4033, #7B3F00, #B87333);
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: auto;
+        }
+
+        .footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="header-title">Plumbing System Calculator</div>
+            <div class="header-nav">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+                <a href="#">Disclaimer</a>
+            </div>
+        </div>
+        
+        <div class="button-container">
+            <form action="{{ url_for('ppage1') }}">
+                <button class="plumbing-button">Pipe Sizing Calculations</button>
+            </form>
+
+            <form action="{{ url_for('ppage2') }}">
+                <button class="plumbing-button">Pipe Size and Valve Data</button>
+            </form>
+        </div>
+
+        <div class="footer">
+            <p>Engineer's Toolbox © 2024</p>
+        </div>
+    </div>
+</body>
+</html>

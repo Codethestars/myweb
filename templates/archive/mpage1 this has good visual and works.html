@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HVAC Calculator</title>
+    <style>
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f5f1e8;
+            font-family: Arial, sans-serif;
+        }
+        
+        .container {
+            width: 960px;
+            height: 720px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.15);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        /* Header styles */
+        .header {
+            background: linear-gradient(90deg, #0b3557, #1a4875, #2196f3);
+            color: white;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header-title {
+            font-size: 1.4rem;
+            font-weight: bold;
+        }
+
+        .header-nav {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .header-nav a {
+            color: white;
+            text-decoration: none;
+            position: relative;
+            padding: 5px 0;
+        }
+
+        .header-nav a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: white;
+            transition: width 0.3s ease;
+        }
+
+        .header-nav a:hover::after {
+            width: 100%;
+        }
+
+        /* Content styles */
+        .content {
+            flex: 1;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .content-title {
+            text-align: center;
+            color: #0b3557;
+            font-size: 2rem;
+            margin-bottom: 3rem;
+            text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+        }
+
+        /* Labels and comboboxes */
+        .labels-row {
+            display: flex;
+            gap: 20px;
+            width: 100%;
+            max-width: 900px;
+            margin-bottom: 12px;
+            justify-content: center;
+        }
+
+        .comboboxes-row {
+            display: flex;
+            gap: 20px;
+            width: 100%;
+            max-width: 900px;
+        }
+
+        .combobox-label {
+            color: #0b3557;
+            font-weight: bold;
+            font-size: 1.1rem;
+            text-align: center;
+        }
+
+        .label-large { flex: 2; }
+        .label-small { flex: 1; }
+        .select-large { flex: 2; }
+        .select-small { flex: 1; }
+
+        select {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #1a75ff;
+            border-radius: 8px;
+            background-color: white;
+            color: #000000;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        select:hover {
+            border-color: #0b3557;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        select:disabled {
+            background-color: #f0f0f0;
+            border-color: #cccccc;
+            color: #666666;
+            cursor: not-allowed;
+        }
+
+        /* Footer styles */
+        .footer {
+            background: linear-gradient(90deg, #0b3557, #1a4875, #2196f3);
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            font-size: 1rem;
+        }
+
+        .footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="header-title">Engineer's Toolbox</div>
+            <div class="header-nav">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+                <a href="#">Disclaimer</a>
+            </div>
+        </div>
+        
+        <div class="content">
+            <h2 class="content-title">Minimum Exhaust Air Calculator</h2>
+            
+            <div class="labels-row">
+                <label class="combobox-label label-large">Type:</label>
+                <label class="combobox-label label-small">Occupancy:</label>
+                <label class="combobox-label label-small">Area:</label>
+                <label class="combobox-label label-small">Min Exhaust:</label>
+            </div>
+
+            <div class="comboboxes-row">
+                <select id="type" class="select-large" onchange="updateDependentFields()">
+                    <option value="">Select Type</option>
+                </select>
+                
+                <select id="occupancy" class="select-small" disabled readonly>
+                    <option value="">Select Occupancy</option>
+                </select>
+                
+                <select id="area" class="select-small" disabled readonly>
+                    <option value="">Select Area</option>
+                </select>
+                
+                <select id="minExhaust" class="select-small" disabled readonly>
+                    <option value="">Select Min Exhaust</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>Engineer's Toolbox © 2024</p>
+        </div>
+    </div>
+
+    <script>
+        let fullData = [];
+
+        fetch('/get_data')
+            .then(response => response.json())
+            .then(data => {
+                fullData = data;
+                const typeSelect = document.getElementById('type');
+                const types = [...new Set(data.map(item => item.Type))];
+                types.forEach(type => {
+                    const option = document.createElement('option');
+                    option.value = type;
+                    option.textContent = type;
+                    typeSelect.appendChild(option);
+                });
+            })
+            .catch(error => console.error('Error:', error));
+
+        function updateDependentFields() {
+            const selectedType = document.getElementById('type').value;
+            const matchingRow = fullData.find(item => item.Type === selectedType);
+
+            if (matchingRow) {
+                const occupancySelect = document.getElementById('occupancy');
+                occupancySelect.innerHTML = '<option value="">Select Occupancy</option>';
+                const occupancyOption = document.createElement('option');
+                occupancyOption.value = matchingRow.Occupancy;
+                occupancyOption.textContent = matchingRow.Occupancy;
+                occupancySelect.appendChild(occupancyOption);
+                occupancySelect.value = matchingRow.Occupancy;
+
+                const areaSelect = document.getElementById('area');
+                areaSelect.innerHTML = '<option value="">Select Area</option>';
+                const areaOption = document.createElement('option');
+                areaOption.value = matchingRow.Area;
+                areaOption.textContent = matchingRow.Area;
+                areaSelect.appendChild(areaOption);
+                areaSelect.value = matchingRow.Area;
+
+                const minExhaustSelect = document.getElementById('minExhaust');
+                minExhaustSelect.innerHTML = '<option value="">Select Min Exhaust</option>';
+                const minExhaustOption = document.createElement('option');
+                minExhaustOption.value = matchingRow.MinExhaust;
+                minExhaustOption.textContent = matchingRow.MinExhaust;
+                minExhaustSelect.appendChild(minExhaustOption);
+                minExhaustSelect.value = matchingRow.MinExhaust;
+            }
+        }
+    </script>
+</body>
+</html>

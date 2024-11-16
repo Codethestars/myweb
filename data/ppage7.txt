@@ -1,0 +1,4 @@
+Nominal Pipe Size,in.|Insulated Pipe, 1/2-in.Fiberglass|Schedule 40 Steel|Bare Pipe Brass, Copper,T.P.|Type K Copper
+1/2|15|35|26|19
+3/4|17|43|32|26
+1|19|53|38|32

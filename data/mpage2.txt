@@ -1,0 +1,4 @@
+AREA DESIGNATION|MINIMUM NUMBER OF FILTER BANKS|FILTER EFF% FILTER BANK NO.1|FILTER EFF% FILTER BANK NO.2
+All areas for inpatient care, treatment and/or diagnosis, an those areas providing direct service or cleaning supplies|2|30% MERV 8|80% MERV 13
+Administrative, bulk storage, soiled holding, laundries and food prep areas|1|30% MERV 8|-|-
+

@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recommended Sheet Metal Duct Sizes Based on 0.08" w.g.</title>
+    <style>
+        :root {
+            --grid-color: rgba(11, 53, 87, 0.08);
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            width: 1200px;
+            height: 720px;
+            background-color: #f5f5f5;
+            background-image: 
+                linear-gradient(var(--grid-color) 1px, transparent 1px),
+                linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
+            background-size: 20px 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.15);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(90deg, #0b3557, #1a73e8);
+            color: white;
+            padding: 15px 20px;
+            text-align: center;
+            flex-shrink: 0;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 1.4rem;
+        }
+
+        .breadcrumb {
+            padding: 10px 20px;
+            font-size: 0.9rem;
+            color: #666;
+            background-color: rgba(255, 255, 255, 0.5);
+            flex-shrink: 0;
+        }
+
+        .breadcrumb a {
+            color: #0b3557;
+            text-decoration: none;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        .breadcrumb a:hover {
+            color: #1a73e8;
+        }
+
+        .breadcrumb a::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background-color: #1a73e8;
+            transition: width 0.3s ease;
+        }
+
+        .breadcrumb a:hover::after {
+            width: 100%;
+        }
+
+        .breadcrumb span {
+            margin: 0 8px;
+            color: #999;
+        }
+
+        .content {
+            flex: 1;
+            padding: 20px;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .menu-container {
+            display: flex;
+            align-items: flex-start;
+            gap: 5px;
+            padding: 0 20px;
+        }
+
+        .combobox-container {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            width: 200px;  /* Equal width for all boxes */
+        }
+
+        .combobox-label {
+            color: #0b3557;
+            font-weight: bold;
+            font-size: 14px;
+            text-align: center;
+            min-height: 60px;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            line-height: 1.2;
+            padding: 0 5px;
+        }
+
+        select {
+            width: 100%;
+            padding: 8px;
+            border: 2px solid #1a73e8;
+            border-radius: 4px;
+            background: #FFFFFF !important;
+            font-size: 14px;
+            color: #000000;
+            height: 60px;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+        }
+
+        /* Show dropdown arrow only for enabled selects */
+        select:not([disabled]) {
+            -webkit-appearance: auto;
+            -moz-appearance: auto;
+            appearance: auto;
+        }
+
+        select:hover:not(:disabled) {
+            border-color: #1a73e8;
+        }
+
+        select:focus {
+            outline: none;
+            border-color: #1a73e8;
+            box-shadow: 0 0 0 3px rgba(26, 115, 232, 0.2);
+        }
+
+        select:disabled {
+            background: #FFFFFF !important;
+            cursor: not-allowed;
+            color: #000000;
+            border-color: #1a73e8;
+            opacity: 0.8;
+        }
+
+        .footer {
+            background: linear-gradient(90deg, #0b3557, #1a73e8);
+            color: white;
+            text-align: center;
+            padding: 15px;
+            flex-shrink: 0;
+        }
+
+        .footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Recommended Sheet Metal Duct Sizes Based on 0.08" w.g.</h1>
+        </div>
+
+        <div class="breadcrumb">
+            <a href="/">Home</a>
+            <span>/</span>
+            <a href="/landing">Mechanical Menu</a>
+            <span>/</span>
+            <a href="#">Recommended Sheet Metal Duct Sizes</a>
+        </div>
+        
+        <div class="content">
+            <div class="menu-container">
+                <div class="combobox-container">
+                    <label class="combobox-label">AIRFLOW (cfm)</label>
+                    <select id="airflow" onchange="updateDetails()">
+                        <option value="">Select Airflow</option>
+                    </select>
+                </div>
+                
+                <div class="combobox-container">
+                    <label class="combobox-label">VELOCITY (fpm)</label>
+                    <select id="velocity" disabled>
+                        <option value="">Select Velocity</option>
+                    </select>
+                </div>
+                
+                <div class="combobox-container">
+                    <label class="combobox-label">ROUND DUCT DIAMETER (inch)</label>
+                    <select id="roundDuct" disabled>
+                        <option value="">Select Diameter</option>
+                    </select>
+                </div>
+                
+                <div class="combobox-container">
+                    <label class="combobox-label">RECTANGULAR DUCT<br>(inch x inch)</label>
+                    <select id="rectDuct" disabled>
+                        <option value="">Select Size</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>Building Systems Engineering Design Resources © 2024</p>
+        </div>
+    </div>
+    
+    <script>
+        let fullData = [];
+
+        fetch('/get_data_page6')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok ' + response.statusText);
+                }
+                return response.json();
+            })
+            .then(data => {
+                fullData = data;
+                const airflowSelect = document.getElementById('airflow');
+                const airflows = [...new Set(data.map(item => item["AIRFLOW (cfm)"]))];
+                
+                airflowSelect.innerHTML = '<option value="">Select Airflow</option>';
+                airflows.forEach(airflow => {
+                    const option = document.createElement('option');
+                    option.value = airflow;
+                    option.textContent = airflow;
+                    airflowSelect.appendChild(option);
+                });
+            })
+            .catch(error => {
+                console.error('Fetch error:', error);
+                const airflowSelect = document.getElementById('airflow');
+                airflowSelect.innerHTML = '<option value="">Error loading data</option>';
+            });
+
+        function updateDetails() {
+            const selectedAirflow = document.getElementById('airflow').value;
+            const matchingRow = fullData.find(item => item["AIRFLOW (cfm)"] === selectedAirflow);
+            
+            if (matchingRow) {
+                document.getElementById('velocity').innerHTML = 
+                    `<option>${matchingRow["VELOCITY (fpm)"]}</option>`;
+                document.getElementById('roundDuct').innerHTML = 
+                    `<option>${matchingRow["ROUND DUCT DIAMETER (inch)"]}</option>`;
+                document.getElementById('rectDuct').innerHTML = 
+                    `<option>${matchingRow["RECTANGULAR DUCT (inch x inch)"]}</option>`;
+            }
+        }
+    </script>
+</body>
+</html>

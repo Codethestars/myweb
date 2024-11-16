@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Under Construction</title>
+    <style>
+        :root {
+            --primary-dark: #808080;
+            --grid-color: rgba(11, 53, 87, 0.08);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            width: 960px;
+            height: 720px;
+            background-color: #f5f1e8;
+            box-shadow: 0 0 20px rgba(0,0,0,0.15);
+            background-image: 
+                linear-gradient(var(--grid-color) 1px, transparent 1px),
+                linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
+            background-size: 20px 20px;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .header {
+            background: linear-gradient(90deg, #808080, #C0C0C0, #A8A8A8);
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .header h1 {
+            font-size: 1.4rem;
+            margin: 0;
+        }
+
+        .breadcrumb {
+            padding: 10px 20px;
+            background: #f8f5f0;
+            border-bottom: 1px solid rgba(128, 128, 128, 0.1);
+        }
+
+        .breadcrumb-list {
+            list-style: none;
+            display: flex;
+            align-items: center;
+        }
+
+        .breadcrumb-item {
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+            color: #808080;
+        }
+
+        .breadcrumb-item:not(:last-child):after {
+            content: "›";
+            margin: 0 10px;
+            color: #A8A8A8;
+        }
+
+        .breadcrumb-link {
+            color: #808080;
+            text-decoration: none;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        .breadcrumb-link:hover {
+            color: #666666;
+        }
+
+        .breadcrumb-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background: linear-gradient(90deg, #808080, #C0C0C0, #A8A8A8);
+            transition: width 0.3s ease;
+        }
+
+        .breadcrumb-link:hover::after {
+            width: 100%;
+        }
+
+        .breadcrumb-current {
+            color: #A8A8A8;
+            font-weight: 600;
+        }
+
+        .content {
+            flex: 1;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            gap: 20px;
+        }
+
+        .footer {
+            background: linear-gradient(90deg, #808080, #C0C0C0, #A8A8A8);
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: auto;
+            box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+        }
+
+        .footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Under Construction</h1>
+        </div>
+
+        <nav class="breadcrumb">
+            <ul class="breadcrumb-list">
+                <li class="breadcrumb-item">
+                    <a href="/" class="breadcrumb-link">Home</a>
+                </li>
+                <li class="breadcrumb-item">
+                    <a href="epage1.html" class="breadcrumb-link">Electrical Menu</a>
+                </li>
+                <li class="breadcrumb-item">
+                    <span class="breadcrumb-current">Under Construction</span>
+                </li>
+            </ul>
+        </nav>
+        
+        <div class="content">
+        </div>
+
+        <div class="footer">
+            <p>Building Systems Engineering Design Resources © 2024</p>
+        </div>
+    </div>
+</body>
+</html>

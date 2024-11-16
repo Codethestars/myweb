@@ -1,0 +1,4 @@
+FUNCTION OR SPACE|PRESSURE RELATIONSHIP TO ADJACENT AREAS (f)(n)|MINIMUM OUTDOOR ACH|MINIMUM TOTAL ACH|ALL ROOM AIR EXHAUSTED DIRECTLY TO OUTDOORS (j)|AIR RECIRCULATED BY MEANS OF ROOM UNITS (a)|DESIGN RELATIVE HUMIDITY(k),%|DESIGN TEMPERATURE (l),DEG F
+Airborne infection isolation anteroom (u)|(e)|NR|10|Yes|No|NR|NR|
+Airborne infection isolation anteroom (u)|Negative|2|12|Yes|No|max 60|70-75|
+Airborne infection isolation treatment/exam room|Negative|2|12|Yes|No|NR|NR|

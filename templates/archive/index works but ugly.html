@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HVAC and Plumbing Systems Calculator</title>
+    <style>
+        /* Style to center the container on the screen */
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f9f9f9;
+            font-family: Arial, sans-serif;
+        }
+        
+        /* Container to act as the frame */
+        .container {
+            width: 960px;
+            height: 720px;
+            background-color: white;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        /* Header and Footer Styling */
+        .header, .footer {
+            width: 100%;
+            padding: 1rem;
+            background-color: #1a4875;
+            color: white;
+            text-align: center;
+            border-radius: 8px;
+        }
+
+        .footer p {
+            margin: 0;
+            font-size: 1rem;
+            font-weight: bold;
+        }
+
+        /* Content styling for buttons */
+        .content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-grow: 1;
+        }
+
+        .button-container {
+            display: flex;
+            gap: 20px;
+        }
+
+        /* Button styling */
+        .hvac-button {
+            width: 200px;
+            height: 100px;
+            background-color: #1a4875;
+            color: white;
+            font-size: 1.25rem;
+            font-weight: bold;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>HVAC and Plumbing Systems Calculator</h1>
+        </div>
+        
+        <div class="content">
+            <div class="button-container">
+                <form action="{{ url_for('landing') }}">
+                    <button class="hvac-button">HVAC</button>
+                </form>
+                <form action="{{ url_for('planding') }}">
+                    <button class="hvac-button">PLUMBING</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2024 HVAC and Plumbing Systems Calculator</p>
+        </div>
+    </div>
+</body>
+</html>

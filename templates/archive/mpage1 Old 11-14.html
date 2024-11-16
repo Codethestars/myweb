@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minimum Exhaust Rates</title>
+    <style>
+        :root {
+            --primary-dark: #0b3557;
+            --grid-color: rgba(11, 53, 87, 0.08);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+        
+        .container {
+            width: 1200px;
+            height: 620px;
+            background-color: #f5f1e8;
+            box-shadow: 0 0 20px rgba(0,0,0,0.15);
+            background-image: 
+                linear-gradient(var(--grid-color) 1px, transparent 1px),
+                linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
+            background-size: 20px 20px;
+            display: flex;
+            flex-direction: column;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(90deg, #0b3557, #1a4875, #2196f3);
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .header-title {
+            font-size: 1.4rem;
+            font-weight: bold;
+        }
+
+        .breadcrumb {
+            padding: 10px 20px;
+            color: var(--primary-dark);
+        }
+
+        .breadcrumb a {
+            color: var(--primary-dark);
+            text-decoration: none;
+            position: relative;
+        }
+
+        .breadcrumb a:hover {
+            color: #2196f3;
+        }
+
+        .breadcrumb a::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background-color: #2196f3;
+            transition: width 0.3s ease;
+        }
+
+        .breadcrumb a:hover::after {
+            width: 100%;
+        }
+
+        .breadcrumb span {
+            margin: 0 8px;
+            color: #666;
+        }
+
+        .content {
+            flex: 1;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .labels-row {
+            display: flex;
+            gap: 20px;
+            width: 100%;
+            max-width: 1140px;
+            margin-bottom: 12px;
+        }
+
+        .comboboxes-row {
+            display: flex;
+            gap: 20px;
+            width: 100%;
+            max-width: 1140px;
+            margin-bottom: 20px;
+        }
+
+        .combobox-label {
+            color: #0b3557;
+            font-weight: bold;
+            font-size: 1.1rem;
+            text-align: center;
+            padding: 0 5px;
+            position: relative;
+            height: 44px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .label-large { 
+            flex: 1.87;
+            margin-right: 0;
+        }
+        .label-small { 
+            flex: 0.7; 
+        }
+        .select-large { 
+            flex: 1.87;
+        }
+        .select-small { 
+            flex: 0.7; 
+        }
+
+        select {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #1a75ff;
+            border-radius: 8px;
+            background-color: white;
+            color: #000000;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            height: 60px;
+        }
+
+        select:hover {
+            border-color: #0b3557;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        select:disabled {
+            background-color: #f0f0f0;
+            border-color: #cccccc;
+            color: #000000;
+            cursor: not-allowed;
+            opacity: 0.7;
+        }
+
+        .footer {
+            background: linear-gradient(90deg, #0b3557, #1a4875, #2196f3);
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: auto;
+        }
+
+        .footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="header-title">Minimum Exhaust Rates</div>
+        </div>
+
+        <div class="breadcrumb">
+            <a href="{{ url_for('index') }}">Home</a>
+            <span>›</span>
+            <a href="{{ url_for('landing') }}">Mechanical Menu</a>
+            <span>›</span>
+            <a href="#">Minimum Exhaust Rates</a>
+        </div>
+        
+        <div class="content">
+            <div class="labels-row">
+                <label class="combobox-label label-large">OCCUPANCY CATEGORY</label>
+                <label class="combobox-label label-small">EXHAUST RATE<br>(CFM/unit)</label>
+                <label class="combobox-label label-small">EXHAUST RATE<br>(CFM/sq ft)</label>
+                <label class="combobox-label label-small">AIR<br>CLASS</label>
+            </div>
+
+            <div class="comboboxes-row">
+                <select id="occupancyCategory" class="select-large" onchange="updateDependentFields()">
+                    <option value="Arenas">Arenas</option>
+                </select>
+                
+                <select id="exhaustRateUnit" class="select-small">
+                    <option value="-">-</option>
+                </select>
+                
+                <select id="exhaustRateSqFt" class="select-small">
+                    <option value="0.50">0.50</option>
+                </select>
+                
+                <select id="airClass" class="select-small">
+                    <option value="1">1</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>Building Systems Engineering Design Resources © 2024</p>
+        </div>
+    </div>
+
+    <script>
+        let fullData = [];
+
+        fetch('/get_data')
+            .then(response => response.json())
+            .then(data => {
+                fullData = data;
+                const categorySelect = document.getElementById('occupancyCategory');
+                const categories = [...new Set(data.map(item => item['OCCUPANCY CATEGORY']))];
+                categories.forEach(category => {
+                    if (category !== 'Arenas') { // Skip Arenas as it's already the default
+                        const option = document.createElement('option');
+                        option.value = category;
+                        option.textContent = category;
+                        categorySelect.appendChild(option);
+                    }
+                });
+            })
+            .catch(error => console.error('Error:', error));
+
+        function updateDependentFields() {
+            const selectedCategory = document.getElementById('occupancyCategory').value;
+            const matchingRow = fullData.find(item => item['OCCUPANCY CATEGORY'] === selectedCategory);
+
+            if (matchingRow) {
+                const exhaustUnitSelect = document.getElementById('exhaustRateUnit');
+                exhaustUnitSelect.innerHTML = '';
+                const exhaustUnitOption = document.createElement('option');
+                exhaustUnitOption.value = matchingRow['EXHAUST RATE (CFM/unit)'];
+                exhaustUnitOption.textContent = matchingRow['EXHAUST RATE (CFM/unit)'];
+                exhaustUnitSelect.appendChild(exhaustUnitOption);
+                exhaustUnitSelect.value = matchingRow['EXHAUST RATE (CFM/unit)'];
+
+                const exhaustSqFtSelect = document.getElementById('exhaustRateSqFt');
+                exhaustSqFtSelect.innerHTML = '';
+                const exhaustSqFtOption = document.createElement('option');
+                exhaustSqFtOption.value = matchingRow['EXHAUST RATE (CFM/sq ft)'];
+                exhaustSqFtOption.textContent = matchingRow['EXHAUST RATE (CFM/sq ft)'];
+                exhaustSqFtSelect.appendChild(exhaustSqFtOption);
+                exhaustSqFtSelect.value = matchingRow['EXHAUST RATE (CFM/sq ft)'];
+
+                const airClassSelect = document.getElementById('airClass');
+                airClassSelect.innerHTML = '';
+                const airClassOption = document.createElement('option');
+                airClassOption.value = matchingRow['AIR CLASS'];
+                airClassOption.textContent = matchingRow['AIR CLASS'];
+                airClassSelect.appendChild(airClassOption);
+                airClassSelect.value = matchingRow['AIR CLASS'];
+            }
+        }
+    </script>
+</body>
+</html>

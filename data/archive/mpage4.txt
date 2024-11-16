@@ -1,0 +1,127 @@
+| FUNCTION OR SPACE | PRESSURE RELATIONSHIP TO ADJACENT AREAS (f)(n) | MINIMUM OUTDOOR ACH | MINIMUM TOTAL ACH | ALL ROOM AIR EXHAUSTED DIRECTLY TO OUTDOORS (j) | AIR RECIRCULATED BY MEANS OF ROOM UNITS (a) | DESIGN RELATIVE HUMIDITY (k)% | DESIGN TEMPERATURE (I) DEG F |
+|-------------------|------------------------------------------------|---------------------|-------------------|-------------------------------------------------|---------------------------------------------|-------------------------------|------------------------------|
+| Airborne infection isolation anteroom | ( e ) | NR | 10 | Yes | No | NR | NR |
+| Airborne infection isolation room | Negative | 2 | 12 | Yes | No | MAX 60 | 70-75 |
+| Airborne infection isolation treatment/exam room | Negative | 2 | 12 | Yes | No | NR | NR |
+| Angiography room | Positive | 3 | 15 | NR | NR | NR | 70-75 |
+| Bathing room | Negative | NR | 10 | Yes | No | MAX 60 | 70-75 |
+| Bathroom | Negative | NR | 10 | Yes | No | NR | 72-78 |
+| Bedpan room | NR | NR | 10 | Yes | No | NR | NR |
+| Blood bank/tissue storage | NR | 2 | 6 | NR | NR | NR | NR |
+| Blood/draw/phlebotomy | Negative | 2 | 6 | NR | NR | NR | NR |
+| "Bronchoscopy, sputum collection, and pentamidine administration" | Negative | 2 | 12 | Yes | No | NR | 68-73 |
+| Cardiac/catheterization lab | Positive | 3 | 15 | NR | No | MAX 60 | 70-75 |
+| Clean linen storage | Positive | NR | 2 | NR | NR | NR | 72-78 |
+| Clean workroom (central medical and surgical supply space) | Positive | 2 | 4 | NR | No | MAX 60 | 72-78 |
+| Clean workroom or clean holding (support) | Positive | 2 | 4 | NR | NR | NR | NR |
+| Critical and intensive care | NR | 2 | 6 | NR | No | 30-60 | 70-75 |
+| CT Scan | NR | 2 | 6 | NR | NR | MAX 60 | NR |
+| Darkroom | Negative | 2 | 10 | Yes | No | NR | NR |
+| Delivery room (caesarean) | Positive | 4 | 20 | NR | No | 20-60 | 68-75 |
+| Dialysis treatment area | NR | 2 | 6 | NR | NR | NR | 72-78 |
+| Dialyzer reprocessing room | Negative | NR | 10 | Yes | No | NR | NR |
+| Dietary storage | NR | NR | 2 | NR | No | NR | 72-78 |
+| Electroconvulsive therapy procedure room | Positive | 3 | 15 | NR | NR | NR | NR |
+| Emergency department exam/treatment room | NR | 2 | 6 | NR | NR | MAX 60 | 70-75 |
+| Endoscopy cleaning | Negative | 2 | 10 | Yes | No | NR | NR |
+| ER decontamination | Negative | 2 | 12 | Yes | No | NR | NR |
+| ER waiting rooms | Negative | 2 | 12 | Yes (q) | NR | MAX 65 | 70-75 |
+| Examination room | NR | 2 | 6 | NR | NR | MAX 60 | 70-75 |
+| Fast track room | NR | 2 | 6 | NR | NR | NR | NR |
+| Fluoroscopy room | Negative | 2 | 6 | Yes | No | NR | NR |
+| Food preparation center | NR | 2 | 10 | NR | No | NR | 72-78 |
+| Gastrointestinal endoscopy procedure room | NR | 2 | 6 | NR | No | 20-60 | 68-73 |
+| Hazardous material storage | Negative | 2 | 10 | Yes | No | NR | NR |
+| Hydrotherapy | Negative | 2 | 6 | NR | NR | NR | 72-80 |
+| Infusion room | Positive | 2 | 6 | NR | NR | NR | NR |
+| Intermediate care (s) | NR | 2 | 6 | NR | NR | MAX 60 | 70-75 |
+| Interventional imaging procedure room | Positive | 5 | 15 | NR | NR | NR | NR |
+| IV Prep room | Positive | 2 | 6 | NR | NR | NR | NR |
+| Janitor's closet, housekeeping | Negative | NR | 10 | Yes | No | NR | NR |
+| Labor/delivery/recovery (LDR)(s) | NR | 2 | 6 | NR | NR | max 60 | 70-75 |
+| Labor/delivery/recovery/postpartum (LDRP)(s) | NR | 2 | 6 | NR | NR | max 60 | 70-75 |
+| Laboratory bacteriorlogy | NR | 2 | 6 | NR | NR | max 60 | 70-75 |
+| Laboratory biochemistry (v) | Negative | 2 | 6 | Yes | NR | NR | 70-75 |
+| Laboratory cytology (v) | Negative | 2 | 6 | Yes | NR | NR | 70-75 |
+| Laboratory general (v) | Negative | 2 | 6 | Yes | NR | NR | 70-75 |
+| Laboratory glasswashing (v) | Negative | 2 | 6 | NR | NR | NR | 70-75 |
+| Laboratory histology (v) | Negative | 2 | 10 | Yes | NR | NR | |
+| Laboratory infectious disease and virus | Negative | 2 | 6 | Yes | NR | NR | 70-75 |
+| Laboratory media transfer (v) | Positive | 2 | 6 | Yes | NR | NR | 70-75 |
+| Laboratory microbiology (v) | Negative | 2 | 6 | NR | NR | NR | 70-75 |
+| Laboratory nuclear medicine (v) | Negative | 2 | 6 | Yes | NR | NR | 70-75 |
+| Laboratory pathology (v) | Negative | 2 | 6 | Yes | NR | NR | 70-75 |
+| Laboratory serology (v) | Negative | 2 | 6 | Yes | NR | NR | 70-75 |
+| Laboratory sterilizing (v) | Negative | 2 | 6 | Yes | NR | NR | 70-75 |
+| Lactation | NR | 2 | 6 | NR | NR | NR | NR |
+| Laser eye room | NR | 2 | 10 | NR | NO | NR | |
+| Laundry general | Positive | 2 | 6 | NR | Yes | NR | 70-75 |
+| Linen and trash chute room | Negative | 2 | 10 | Yes | Yes | NR | |
+| Medical/anesthesia gas storage (r) | Negative | NR | 8 | Yes | NR | NR | NR |
+| Medication room | Negative | NR | 8 | Yes | NR | NR | |
+| Morgues and autopsy room (n) | Negative | 2 | 6 | NR | NR | max 60 | 70-75 |
+| MRI room | NR | 2 | 12 | Yes | Yes | NR | 70-75 |
+| Negative-pressure x-ray room | Negative | 2 | 12 | YES | NO | MAX 60 | 72-78 |
+| Newborn intensive care | NR | 2 | 12 | Yes | Yes | max 60 | 70-75 |
+| Newborn intensive care formula room | Positive | 2 | 6 | NR | Yes | 30-60 | 70-75 |
+| Newborn/well baby nursery suite | NR | 2 | 10 | NR | Yes | NR | 72-78 |
+| Nonrefrigerated body-holding room (h) | Negative | NR | 6 | NR | Yes | 30-60 | 70-75 |
+| Nourishment area or room | NR | NR | 10 | Yes | NR | NR | 70-75 |
+| Nuclear medicine (Gamma PET SPECT) | Negative | 2 | 6 | YES | NR | NR | NR |
+| Nuclear medicine hot lab | Negative | 2 | 6 | Yes | Yes | NR | 70-75 |
+| Nuclear medicine treatment room | Negative | 2 | 6 | Yes | Yes | NR | 70-75 |
+| Nurse station | (aa) | (aa) | (aa) | (aa) | (aa) | (aa) | (aa) |
+| Observation | NR | 2 | 6 | NR | NR | NR | 70-75 |
+| Occupational therapy | NR | 2 | 6 | NR | NR | NR | 70-75 |
+| Operating room/hybrid operating room (m)(n)(o) | Positive | 4 | 20 | NR | No | 20-60 | 68-75 |
+| Operating/surgical cystoscopic room (m)(n)(o) | Positive | 2 | 6 | NR | NR | NR | 68-75 |
+| Patient's corridor | Negative | NR | 10 | Yes | No | NR | NR |
+| Patient holding preparation | NR | 2 | 6 | NR | NR | max 60 | NR |
+| Patient room | NR | 2 | 6 | NR | NR | max 60 | 70-75 |
+| Pediatric play area | NR | 2 | 6 | NR | NR | max 60 | NR |
+| Pharmacy (b) Drug room | Positive | 2 | 4  NR | NR | NR | NR |
+| Pharmacy (b) HD ante room | Positive | 2 | 4  NR | NR | NR | NR |
+| Pharmacy (b) HD buffer room (b) | Positive | 2 | 4  NR | NR | NR | NR |
+| Pharmacy (b) HD segregated compounding area (a)(b) | Positive | 2 | 4  NR | NR | NR | NR |
+| Pharmacy (b) HD storage (b) | Positive | 2 | 4  NR | NR | NR | NR |
+| Pharmacy (b) Non-HD ante room (b) | Positive | 2 | 4  NR | NR | NR | NR |
+| Pharmacy (b) Non-HD buffer room (b) | Positive | 2 | 4  NR | NR | NR | NR |
+| Pharmacy (b) Non-HD segregated compounding area | Positive | 2 | 4  NR | NR | NR | NR |
+| Physical therapy nurse area | Negative | 2 | 6 | Yes | NR | NR | 70-75 |
+| Physical area (diagnostic and treatment) | Negative | 2 | 6 | Yes | NR | NR | 70-75 |
+| Post-anesthesia care unit | Negative | 2 | 6 | NR | NR | NR | 70-75 |
+| Pre-screening area | Negative | 2 | 10 | Yes | NR | NR | |
+| Pre-screening area | Negative | 2 | 6 | Yes | NR | NR | 70-75 |
+| Procedure room (o)(d) | Positive | 2 | 6 | Yes | NR | NR | 70-75 |
+| Protective environment anteroom (t) | Negative | 2 | 6 | NR | NR | NR | 70-75 |
+| Protective environment room | Negative | 2 | 6 | Yes | NR | NR | 70-75 |
+| Radiology waiting rooms | Negative | 2 | 6 | Yes | NR | NR | 70-75 |
+| Recovery rooms | Negative | 2 | 6 | Yes | NR | NR | 70-75 |
+| Recreational/activity room | Negative | 2 | 6 | Yes | NR | NR | 70-75 |
+| Resident gathering/activity/dinning (nursing facility) | NR | 2 | 6 | NR | NR | NR | NR |
+| Resident room (nursing facility) | NR | 2 | 10 | NR | NO | NR | |
+| Resident unit corridor (nursing facility) | Positive | 2 | 6 | NR | Yes | NR | 70-75 |
+| Seclusion room | Negative | 2 | 10 | Yes | Yes | NR | |
+| Semi-restricted corridor | Negative | NR | 8 | Yes | NR | NR | NR |
+| Shower room | NR | 8 | Yes | NR | NR | |
+| Soiled linen storing and storage | Negative | 2 | 6 | NR | NR | max 60 | 70-75 |
+| Soiled or decontamination room | NR | 2 | 12 | Yes | Yes | NR | 70-75 |
+| Soiled workroom or soiled holding utility room | Negative | 2 | 12 | YES | NO | MAX 60 | 72-78 |
+| Special purpose room (SNF & ICF only) | NR | 2 | 12 | Yes | Yes | max 60 | 70-75 |
+| Speech therapy/audiology room | Positive | 2 | 6 | NR | Yes | 30-60 | 70-75 |
+| Sterile storage | NR | 2 | 10 | NR | Yes | NR | 72-78 |
+| Sterilizer equipment room | Negative | NR | 10 | Yes | 1 | No | NR | NR |
+| Substerile service area | NR | 2 | 6 | NR | 2 | No | NR | NR |
+| Toilet room | Negative | NR | 10 | Yes | 3 | No | NR | NR |
+| Trauma/cardiac room (crisis or shock)? | Positive | 3 | 15 | NR | 4 | NR | 20-60 | 70-75 |
+| Treatment room (surgery and critical care)(p) | NR | 2 | 6 | NR | 5 | NR | 20-60 | 70-75 |
+| Treatment room (diagnostic and treatment) (x) | NR | 2 | 6 | NR | 6 | NR | MAX 60 | 70-75 |
+| Triage | Negative | 2 | 12 | Yes (q) | 7 | NR | MAX 60 | 70-75 |
+| Ultrasound room | NR | 2 | 6 | NR | 8 | NR | NR | NR |
+| Unsterile supply | NR | 2 | 2 | NR | 9 | NR | NR | NR |
+| Waiting area (nuclear medicine) | Negative | 2 | 12 | Yes | 10 | No | NR | NR |
+| Waiting area primary care clinic | Positive | 2 | 10 | Yes (q) | 11 | NR | NR | NR |
+| Warewashing | Positive | NR | 10 | Yes | 12 | No | NR | NR |
+| Wound intensive care (burn unit) | NR | 2 | 6 | NR | 13 | No | 40-60 | 70-75 |
+| X-ray (diagnostic and treatment) | NR | 2 | 6 | NR | 14 | NR | MAX 60 | 72-78 |
+| X-ray (surgery/critical care and catheterization) | Positive | 3 | 15 | NR | 15 | No | MAX 60 | 70-75 |

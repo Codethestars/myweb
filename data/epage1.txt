@@ -1,0 +1,11 @@
+WIRE SIZE (AWG)|AMPACITY (A)|VOLTAGE DROP (%/100FT)|DC RESISTANCE (OHM/1000FT)|CONDUIT SIZE (IN)|INSULATION TYPE|TEMPERATURE RATING (°C)|APPLICATIONS
+14|15|2.1|2.525|1/2|THHN|90|Lighting, Receptacles
+12|20|1.3|1.588|1/2|THHN|90|Lighting, Small Motors
+10|30|0.8|0.999|1/2|THHN|90|Water Heaters, AC Units
+8|40|0.5|0.628|3/4|THHN|90|Ranges, Large Motors
+6|55|0.3|0.395|3/4|THHN|90|Sub Panels, Heavy Equipment
+4|70|0.2|0.249|1|THHN|90|Service Feeders, Large Equipment
+2|95|0.15|0.156|1|THHN|90|Main Service, Heavy Loads
+1|110|0.12|0.124|1-1/4|THHN|90|Industrial Equipment
+1/0|125|0.1|0.098|1-1/4|THHN|90|Service Entrance
+2/0|145|0.08|0.078|1-1/4|THHN|90|Large Service Entrance

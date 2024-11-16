@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HVAC Calculator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+<body>
+    <div class="header">
+        <h1>Minimum Exhaust Air Calculator</h1>
+    </div>
+    
+    <div class="container">
+        <div class="content">
+            <div class="combobox-container">
+                <label class="combobox-label">Type:</label>
+                <select id="type" onchange="updateDependentFields()">
+                    <option value="">Select Type</option>
+                </select>
+            </div>
+            
+            <div class="combobox-container">
+                <label class="combobox-label">Occupancy:</label>
+                <select id="occupancy" disabled readonly>
+                    <option value="">Select Occupancy</option>
+                </select>
+            </div>
+            
+            <div class="combobox-container">
+                <label class="combobox-label">Area:</label>
+                <select id="area" disabled readonly>
+                    <option value="">Select Area</option>
+                </select>
+            </div>
+            
+            <div class="combobox-container">
+                <label class="combobox-label">Min Exhaust:</label>
+                <select id="minExhaust" disabled readonly>
+                    <option value="">Select Min Exhaust</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2024 HVAC System Calculator</p>
+    </div>
+
+    <script>
+        let fullData = [];
+
+        // Fetch data when page loads
+        fetch('/get_data')
+            .then(response => response.json())
+            .then(data => {
+                fullData = data;
+                
+                // Populate type dropdown with unique values
+                const typeSelect = document.getElementById('type');
+                const types = [...new Set(data.map(item => item.Type))];
+                types.forEach(type => {
+                    const option = document.createElement('option');
+                    option.value = type;
+                    option.textContent = type;
+                    typeSelect.appendChild(option);
+                });
+            })
+            .catch(error => console.error('Error:', error));
+
+        function updateDependentFields() {
+            const selectedType = document.getElementById('type').value;
+            const matchingRow = fullData.find(item => item.Type === selectedType);
+
+            if (matchingRow) {
+                // Update Occupancy
+                const occupancySelect = document.getElementById('occupancy');
+                occupancySelect.innerHTML = '<option value="">Select Occupancy</option>';
+                const occupancyOption = document.createElement('option');
+                occupancyOption.value = matchingRow.Occupancy;
+                occupancyOption.textContent = matchingRow.Occupancy;
+                occupancySelect.appendChild(occupancyOption);
+                occupancySelect.value = matchingRow.Occupancy;
+
+                // Update Area
+                const areaSelect = document.getElementById('area');
+                areaSelect.innerHTML = '<option value="">Select Area</option>';
+                const areaOption = document.createElement('option');
+                areaOption.value = matchingRow.Area;
+                areaOption.textContent = matchingRow.Area;
+                areaSelect.appendChild(areaOption);
+                areaSelect.value = matchingRow.Area;
+
+                // Update Min Exhaust
+                const minExhaustSelect = document.getElementById('minExhaust');
+                minExhaustSelect.innerHTML = '<option value="">Select Min Exhaust</option>';
+                const minExhaustOption = document.createElement('option');
+                minExhaustOption.value = matchingRow.MinExhaust;
+                minExhaustOption.textContent = matchingRow.MinExhaust;
+                minExhaustSelect.appendChild(minExhaustOption);
+                minExhaustSelect.value = matchingRow.MinExhaust;
+            }
+        }
+    </script>
+</body>
+</html>

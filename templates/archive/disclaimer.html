@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=960, height=720, user-scalable=no">
+    <title>Disclaimer - Engineer's Toolbox</title>
+    <style>
+        :root {
+            --grid-color: rgba(11, 53, 87, 0.08);
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            width: 960px;
+            height: 720px;
+            background-color: #f5f5f5;
+            background-image: 
+                linear-gradient(var(--grid-color) 1px, transparent 1px),
+                linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
+            background-size: 20px 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.15);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(90deg, #0b3557, #1a73e8);
+            color: white;
+            padding: 15px 20px;
+            text-align: center;
+            flex-shrink: 0;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 1.4rem;
+        }
+
+        .breadcrumb {
+            padding: 10px 20px;
+            font-size: 0.9rem;
+            color: #666;
+            background-color: rgba(255, 255, 255, 0.5);
+            flex-shrink: 0;
+        }
+
+        .breadcrumb a {
+            color: #0b3557;
+            text-decoration: none;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        .breadcrumb a:hover {
+            color: #1a73e8;
+        }
+
+        .content {
+            flex: 1;
+            padding: 20px 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            overflow-y: auto;
+        }
+
+        .disclaimer-text {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            max-width: 800px;
+            margin-bottom: 20px;
+        }
+
+        .page-title {
+            font-size: 28px;
+            color: #0b3557;
+            text-align: center;
+            margin: 10px 0 30px 0;
+            font-weight: bold;
+        }
+
+        .button-group {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .back-btn {
+            background: linear-gradient(90deg, #0b3557, #1a73e8);
+            color: white;
+            border: none;
+            padding: 10px 30px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .back-btn:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .disclaimer-text h3 {
+            color: #0b3557;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        .disclaimer-text p {
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+
+        .footer {
+            background: linear-gradient(90deg, #0b3557, #1a73e8);
+            color: white;
+            text-align: center;
+            padding: 15px;
+            flex-shrink: 0;
+        }
+
+        .footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Engineer's Toolbox</h1>
+        </div>
+
+        <div class="breadcrumb">
+            <a href="{{ url_for('index') }}">Home</a>
+            <span>/</span>
+            <a href="#">Disclaimer</a>
+        </div>
+        
+        <div class="content">
+            <h2 class="page-title">Disclaimer</h2>
+            
+            <div class="disclaimer-text">
+                <div class="disclaimer-text">
+                    <style>
+                        .disclaimer-text p {
+                            font-size: 12px;
+                            line-height: 1.4;
+                            color: #666;
+                            margin-bottom: 12px;
+                            text-align: justify;
+                        }
+                        
+                        .disclaimer-text h3 {
+                            font-size: 14px;
+                            color: #0b3557;
+                            margin-top: 15px;
+                            margin-bottom: 8px;
+                        }
+                    </style>
+                
+                    <h3>Acceptance of Terms</h3>
+                    <p>By accessing and using this website and its tools, you explicitly acknowledge and agree that you have read, understood, and accepted all terms and conditions stated in this disclaimer. Your continued use of this website constitutes your binding acceptance of all terms herein.</p>
+                
+                    <h3>Release of Liability</h3>
+                    <p>You hereby agree to release, waive, discharge, and covenant not to sue the website designer, owner, operators, administrators, content creators, affiliates, successors, and assigns from any and all liability, claims, demands, actions, and causes of action whatsoever arising out of or related to any loss, damage, or injury that may be sustained by you or any third party, whether caused by the negligence of the releasees or otherwise, resulting from use of the information, tools, or content provided on this website.</p>
+                
+                    <h3>Professional Consultation Requirement</h3>
+                    <p>All users acknowledge and agree that they are required to seek the advice, review, and approval of licensed professional engineers, architects, or other qualified professionals before implementing any calculations, designs, or recommendations derived from this website. The tools provided herein are for preliminary reference only and do not constitute professional engineering advice or services.</p>
+                
+                    <h3>Assumption of Risk</h3>
+                    <p>Users expressly agree to assume full responsibility for all risks, losses, costs, and damages arising from or relating to the use of this website and its tools, including but not limited to any errors in calculations, misinterpretation of results, or failure to seek professional verification. This website and its content creators bear no responsibility for any consequences resulting from the use or misuse of the provided information.</p>
+                
+                    <h3>Code and Regulatory Compliance</h3>
+                    <p>Users bear sole responsibility for ensuring compliance with all applicable building codes, standards, regulations, and laws in their jurisdiction. The tools and information provided may not reflect current code requirements, and users must independently verify all regulatory compliance requirements.</p>
+                
+                    <h3>Indemnification</h3>
+                    <p>You agree to indemnify, defend, and hold harmless the website owner, designer, operators, and all affiliated parties from and against any claims, actions, demands, liabilities, losses, damages, judgments, settlements, costs, and expenses (including reasonable attorneys' fees) arising out of or relating to your use of this website or any violation of these terms.</p>
+                
+                    <h3>No Professional Relationship</h3>
+                    <p>Use of this website does not create any professional-client relationship between users and the website owners or operators. No fiduciary duty or other professional obligation exists between users and the website providers.</p>
+                
+                    <h3>Accuracy and Updates</h3>
+                    <p>All information is provided "as is" without any warranty of any kind, either express or implied, including but not limited to the implied warranties of merchantability, fitness for a particular purpose, or non-infringement. The website owner reserves the right to modify, update, or remove any content without notice and bears no responsibility for maintaining or updating the provided information.</p>
+                
+                    <h3>Governing Law</h3>
+                    <p>This disclaimer shall be governed by and construed in accordance with applicable laws, without regard to conflicts of law principles. Any disputes arising from the use of this website shall be subject to the exclusive jurisdiction of the appropriate courts.</p>
+                
+        
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>Engineer's Toolbox © 2024</p>
+        </div>
+    </div>
+</body>
+</html>

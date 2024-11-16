@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Voltage Drop Calculator</title>
+    <style>
+        :root {
+            --primary-dark: #8B0000;
+            --grid-color: rgba(11, 53, 87, 0.08);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            width: 960px;
+            height: 720px;
+            background-color: #f5f1e8;
+            box-shadow: 0 0 20px rgba(0,0,0,0.15);
+            background-image: 
+                linear-gradient(var(--grid-color) 1px, transparent 1px),
+                linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
+            background-size: 20px 20px;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .header {
+            background: linear-gradient(90deg, #8B0000, #FF3333);
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 1.4rem;
+            margin: 0;
+        }
+
+        .content {
+            flex: 1;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            gap: 20px;
+        }
+
+        .construction-message {
+            font-size: 24px;
+            font-weight: bold;
+            color: #8B0000;
+            margin-bottom: 20px;
+        }
+
+        .nerdy-joke {
+            font-size: 18px;
+            color: #FF3333;
+            margin: 10px 0;
+            font-style: italic;
+        }
+
+        .ascii-art {
+            font-family: monospace;
+            white-space: pre;
+            font-size: 14px;
+            color: #8B0000;
+            margin: 20px 0;
+        }
+
+        .status-message {
+            font-size: 16px;
+            color: #666;
+            margin-top: 20px;
+        }
+
+        .footer {
+            background: linear-gradient(90deg, #8B0000, #FF3333);
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: auto;
+        }
+
+        .footer p {
+            margin: 0;
+        }
+
+        .loading-bar {
+            width: 300px;
+            height: 20px;
+            background-color: #f0f0f0;
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+            margin: 20px 0;
+        }
+
+        .loading-progress {
+            width: 20%;
+            height: 100%;
+            background: linear-gradient(90deg, #8B0000, #FF3333);
+            border-radius: 10px;
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.6; }
+            100% { opacity: 1; }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Voltage Drop Calculator</h1>
+        </div>
+        
+        <div class="content">
+            <div class="construction-message">⚡ Circuit Under Maintenance ⚡</div>
+            
+            <div class="ascii-art">
+   _________
+  |  ~ ~ ~  |
+  | [─]─[─] |
+  |_________|
+   |  |  |  |
+   |  |  |  |
+  ⚡️ |  |  | ⚡️
+      |  |
+    </div>
+            
+            <div class="nerdy-joke">Why did the electron get in trouble at school?</div>
+            <div class="nerdy-joke">Because it had too many negative charges! ⚡️</div>
+            
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+            
+            <div class="status-message">
+                Resistance is futile... but our developers are working on reducing it!<br>
+                Expected completion: When the flux capacitor achieves 1.21 gigawatts
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>Engineer's Toolbox © 2024</p>
+        </div>
+    </div>
+</body>
+</html>

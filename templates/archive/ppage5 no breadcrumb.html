@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Minimum Diameters and Maximum Lengths of Individual, Common, Branch, and Circuit Vents and Vent Headers (ft)</title>
+    <style>
+        :root {
+            --primary-dark: #5C4033;
+            --grid-color: rgba(11, 53, 87, 0.08);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            width: 1400px;
+            height: 620px;
+            background-color: #f5f1e8;
+            box-shadow: 0 0 20px rgba(0,0,0,0.15);
+            background-image: 
+                linear-gradient(var(--grid-color) 1px, transparent 1px),
+                linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
+            background-size: 20px 20px;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .header {
+            background: linear-gradient(90deg, #5C4033, #7B3F00, #B87333);
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 1.4rem;
+            margin: 0;
+        }
+
+        .content {
+            flex: 1;
+            padding: 2rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            overflow-y: auto;
+        }
+
+        .combobox-container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .combobox-container:nth-child(1) { width: 110px; }
+        .combobox-container:nth-child(2) { width: 110px; }
+        .combobox-container:nth-child(3) { width: 110px; }
+        .combobox-container:nth-child(4) { width: 110px; }
+        .combobox-container:nth-child(5) { width: 110px; }
+        .combobox-container:nth-child(6) { width: 110px; }
+        .combobox-container:nth-child(7) { width: 120px; }
+        .combobox-container:nth-child(8) { width: 110px; }
+        .combobox-container:nth-child(9) { width: 120px; }
+        .combobox-container:nth-child(10) { width: 110px; }
+
+        .combobox-label {
+            color: #0b3557;
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 1.2;
+            height: 54px;  /* Increased for triple line */
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 8px;
+        }
+
+        select {
+            width: 100%;
+            height: 40px;
+            padding: 12px;
+            border: 2px solid #7B3F00;
+            border-radius: 8px;
+            background-color: white;
+            color: #000000;
+            font-size: 12px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        select:hover {
+            border-color: #5C4033;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        select:disabled {
+            background-color: #f0f0f0;
+            border-color: #cccccc;
+            color: #000000;
+            cursor: not-allowed;
+            opacity: 0.7;
+        }
+
+        .footer {
+            background: linear-gradient(90deg, #5C4033, #7B3F00, #B87333);
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: auto;
+        }
+
+        .footer p {
+            margin: 0;
+        }
+
+        .content::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .content::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        .content::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 4px;
+        }
+
+        .content::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Minimum Diameters and Maximum Lengths of Individual, Common, Branch, and Circuit Vents and Vent Headers (ft)</h1>
+        </div>
+        
+        <div class="content">
+            <div class="combobox-container">
+                <label class="combobox-label">Nominal<br>Pipe Size:</label>
+                <select id="pipeSize" onchange="updatePipeDetails()">
+                    <option value="">Select Pipe Size</option>
+                </select>
+            </div>
+            
+            <div class="combobox-container">
+                <label class="combobox-label">Gate Valve<br>Full Open:</label>
+                <select id="gateValve" disabled readonly>
+                    <option value="">Select Value</option>
+                </select>
+            </div>
+            
+            <div class="combobox-container">
+                <label class="combobox-label">Angle Valve<br>Full Open:</label>
+                <select id="angleValve" disabled readonly>
+                    <option value="">Select Value</option>
+                </select>
+            </div>
+            
+            <div class="combobox-container">
+                <label class="combobox-label">Globe Valve<br>Full Open:</label>
+                <select id="globeValve" disabled readonly>
+                    <option value="">Select Value</option>
+                </select>
+            </div>
+            
+            <div class="combobox-container">
+                <label class="combobox-label">Swing Check<br>Full Open:</label>
+                <select id="swingCheck" disabled readonly>
+                    <option value="">Select Value</option>
+                </select>
+            </div>
+
+            <div class="combobox-container">
+                <label class="combobox-label">45 Degree<br>Elbow:</label>
+                <select id="elbow45" disabled readonly>
+                    <option value="">Select Value</option>
+                </select>
+            </div>
+
+            <div class="combobox-container">
+                <label class="combobox-label">Long Sweep<br>Elbow or<br>Run of Tee:</label>
+                <select id="longSweepElbow" disabled readonly>
+                    <option value="">Select Value</option>
+                </select>
+            </div>
+
+            <div class="combobox-container">
+                <label class="combobox-label">Standard<br>Elbow:</label>
+                <select id="standardElbow" disabled readonly>
+                    <option value="">Select Value</option>
+                </select>
+            </div>
+
+            <div class="combobox-container">
+                <label class="combobox-label">Standard Tee<br>Through<br>Side Outlet:</label>
+                <select id="standardTee" disabled readonly>
+                    <option value="">Select Value</option>
+                </select>
+            </div>
+
+            <div class="combobox-container">
+                <label class="combobox-label">Remarks:</label>
+                <select id="remarks" disabled readonly>
+                    <option value="">Select Value</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>Building Systems Engineering Design Resources © 2024</p>
+        </div>
+    </div>
+
+    <script>
+        let fullData = [];
+
+        fetch('/get_data_ppage5')
+            .then(response => response.json())
+            .then(data => {
+                fullData = data;
+                const pipeSizeSelect = document.getElementById('pipeSize');
+                const pipeSizes = [...new Set(data.map(item => item["NOMINAL PIPE SIZE (IN)"]))];
+                pipeSizes.forEach(size => {
+                    const option = document.createElement('option');
+                    option.value = size;
+                    option.textContent = size;
+                    pipeSizeSelect.appendChild(option);
+                });
+            })
+            .catch(error => console.error('Error:', error));
+
+        function updatePipeDetails() {
+            const selectedSize = document.getElementById('pipeSize').value;
+            const matchingRow = fullData.find(item => item["NOMINAL PIPE SIZE (IN)"] === selectedSize);
+
+            if (matchingRow) {
+                document.getElementById('gateValve').innerHTML = `<option>${matchingRow["GATE VALVE FULL OPEN"]}</option>`;
+                document.getElementById('angleValve').innerHTML = `<option>${matchingRow["ANGLE VALVE FULL OPEN"]}</option>`;
+                document.getElementById('globeValve').innerHTML = `<option>${matchingRow["GLOBE VALVE FULL OPEN"]}</option>`;
+                document.getElementById('swingCheck').innerHTML = `<option>${matchingRow["SWING CHECK FULL OPEN"]}</option>`;
+                document.getElementById('elbow45').innerHTML = `<option>${matchingRow["45 DEG ELBOW"]}</option>`;
+                document.getElementById('longSweepElbow').innerHTML = `<option>${matchingRow["LONG SWEEP ELBOW OR RUN OF TEE"]}</option>`;
+                document.getElementById('standardElbow').innerHTML = `<option>${matchingRow["STANDARD ELBOW"]}</option>`;
+                document.getElementById('standardTee').innerHTML = `<option>${matchingRow["STANDARD TEE THROUGH SIDE OUTLET"]}</option>`;
+                document.getElementById('remarks').innerHTML = `<option>${matchingRow["REMARKS"]}</option>`;
+            }
+        }
+    </script>
+</body>
+</html>

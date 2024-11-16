@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=960, height=720, user-scalable=no">
+    <title>Engineering Tools</title>
+    <style>
+        :root {
+            --primary-dark: #0b3557;
+            --grid-color: rgba(11, 53, 87, 0.08);
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .window-container {
+            width: 960px;
+            height: 720px;
+            background-color: #f5f1e8;
+            font-family: Arial, sans-serif;
+            box-shadow: 0 0 20px rgba(0,0,0,0.15);
+            background-image: 
+                linear-gradient(var(--grid-color) 1px, transparent 1px),
+                linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
+            background-size: 20px 20px;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+
+        .header {
+            background: linear-gradient(90deg, #0b3557, #1a4875, #2196f3);
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+        }
+
+        .nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav a {
+            color: white;
+            text-decoration: none;
+            position: relative;
+            padding: 5px 0;
+            transition: color 0.3s ease;
+        }
+
+        .nav a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: white;
+            transition: width 0.3s ease;
+        }
+
+        .nav a:hover {
+            color: #f0f0f0;
+        }
+
+        .nav a:hover::after {
+            width: 100%;
+        }
+
+        .content {
+            padding: 40px;
+            text-align: center;
+            flex: 1;
+        }
+
+        h1 {
+            color: #0b3557;
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: #666;
+            margin-bottom: 40px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            padding: 0 20px;
+        }
+
+        .card {
+            background: white;
+            height: 200px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            font-weight: bold;
+            color: #0b3557;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: relative;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            overflow: hidden;
+            border: none;
+            width: 100%;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            border-radius: 10px 10px 0 0;
+            transition: height 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        }
+
+        .card:hover::before {
+            height: 8px;
+        }
+
+        .mechanical::before { background: #4287f5; }
+        .electrical::before { background: #ff3333; }
+        .plumbing::before { background: #8B4513; }
+        .energy::before { background: #808080; }
+
+        .footer {
+            background: linear-gradient(90deg, #0b3557, #1a4875, #2196f3);
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        .card.disabled {
+            opacity: 0.7;
+            cursor: not-allowed;
+        }
+
+        .card.disabled:hover {
+            transform: none;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        form {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+        }
+
+        button {
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div class="window-container">
+        <div class="header">
+            <div class="logo">Engineer's Toolbox</div>
+            <div class="nav">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+                <a href="#">Disclaimer</a>
+            </div>
+        </div>
+        <div class="content">
+            <h1>Engineering Design Tools</h1>
+            <div class="subtitle">Building Systems Design Resources</div>
+            <div class="grid">
+                <form action="{{ url_for('landing') }}">
+                    <button class="card mechanical">HVAC</button>
+                </form>
+                <form action="{{ url_for('planding') }}">
+                    <button class="card plumbing">Plumbing</button>
+                </form>
+                <form action="{{ url_for('elanding') }}">
+                    <button class="card electrical">Electrical</button>
+                </form>
+                <form action="{{ url_for('enerlanding') }}">
+                    <button class="card energy">Energy</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer">
+            Engineer's Toolbox © 2024
+        </div>
+    </div>
+</body>
+</html>

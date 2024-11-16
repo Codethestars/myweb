@@ -1,0 +1,6 @@
+RECTANGULAR Largest Duct Dimension Width or Height (inch)|RECTANGULAR Standard Gauge|ROUND Diameters (inch)|Standard Gauge
+Up to 12|24|Up to 8|26
+13 to 30|22|9 to 14|24
+31 to 45|20|15 to 26|22
+46 to 60|18|27 to 36|20
+Over 60|16|Over 36|18

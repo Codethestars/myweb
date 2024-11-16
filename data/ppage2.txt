@@ -1,0 +1,81 @@
+Room|Oxygen|VAC|N2O|Air|Nitrogen|WAGD|Typical Uses
+Anesthesia workroom|1/workstation|1|||||Equipment repair testing
+Animal operating (research/surgery)|1|1|||||Animal anesthesia and surgery
+Animal research lab|1|1|||||Routine animal care
+Autopsy||1/workstation|||||Suction waste materials from body
+Bed holding|1||||||Cardiac arrest, oxygen therapy
+Biochemistry|1|1|||||Standard lab use
+Biochemistry lab|1|1|||||Standard lab use
+Biophysics/biochemical|1|1|||||Standard lab use
+Blood processing|1|1|||||Standard lab use
+Blood receiving (blood donors)|1|1|||||Emergency use
+Cardiac catheterization lab|2/bed|2/bed||2/bed|1||
+Cardio, ortho, neurological|2/room|3/room|||||
+Cesarean/delivery room|2/room|3/room||1/room|||
+Chemical analysis lab (small lab in hospital)|1|1|||||Standard lab use
+Chemical lab|1|1|||||Standard lab use
+Critical care|3/bed|3/bed||1/bed|||General areas
+Coronary critical care|3/bed|2/bed||1/bed|||
+Decontamination room|1|||||Equipment testing
+Deep therapy|1|2|||||Cardiac arrest and other emergencies
+Definitive emergency care exam/treatment rooms|1/bed|1/bed||1/bed|||
+Definitive emergency care observation unit||1/bed||1/bed|||
+Demonstration room||1|||||Demonstration equipment to new employees and students
+Dental repair|1|1||1|||Power drills (dental)
+Ear-nose-throat exam|1|1||1|||Aspiration; topical spray
+ECG|1|1|||||Cardiac arrest and other emergencies
+EEG|1|1|||||Cardiac arrest and other emergencies
+Electron microscopy|1|1|||||Standard lab use
+Emergency room|1|2||1|||Cardiac arrest and other emergencies
+EMG|1|1|||||Cardiac arrest and other emergencies
+Examination/treatment|1/room|1/room|||||
+Exam room and proctoscopic|1|1|||||
+Experimental lab|1|1|||||Standard lab use
+Eye examination|1|1|||||Stock and cardiac arrest
+Fluoroscopy|1|2|||||Cardiac arrest and other emergencies
+Hematology|1|1|||||Standard lab use
+Infant resuscitation space|1/bassinet|1/bassinet||1/bassinet|||
+Infectious and contagious diseases|3/bed|3/bed||1/bed|||Protective environment areas
+Initial emergency management|1/bed|1/bed|||||
+Intensive care units|2/bed|3/bed||1/bed|||For critically ill
+Intermediate care|1/bed|1/bed||1/bed|||Intermediate care areas
+Isolation room|1/bed|2/bed||1/bed|||Oral, gastric, or thoracic
+Laboratory annex|1|1|||||Pull waste evacuated tubing drying apparatus
+Laboratory cleanup area|1|1|||||Drying glassware
+Laboratory workroom|1|1|||||Standard lab use
+Labor/delivery/recovery|1/bed|1/bed|||||Analgesia, patient care
+Labor/delivery/recovery/postpartum|1/bed|1/bed|||||Analgesia, patient care
+Labor room|1/room|1/room||1/room|||
+Linear accelerator vault|1||||||
+Magnetic resonance room|1/room|1/room||1/room|||Coordinate outlets with shield penetrations
+Microbiology|1|1|||||Standard lab use
+Microbiology lab|1|1|||||Standard lab use
+Multi-service room|1|1|||||Cardiac arrest and other emergencies
+Neurological pharmacy teaching lab|1|1|||||Standard lab use
+Neurological physiology teaching lab|1|1|||||Standard lab use
+Newborn intensive care|3/bassinet|3/bassinet||3/bassinet|||
+Newborn nursery|1/4 bassinets|1/4 bassinets||1/4 bassinets|||Incubators, respirators
+Nursing floor|1|2||1|||Therapy, oral, gastric; IPPB, aerosols
+Nursing security|1|1||1|||Patient care
+Observation|1|1|||||Cardiac arrest and other emergencies
+Obstetric recovery room|1/bed|3/bed||1/room|||
+Operating room general|2/room|3/room|||||
+Operating room major|2/room|3/room|1/room|1/room|1|1/room|Patient care
+Oral lab|1|1||1|||Standard lab use
+Orthopedic and cast room|1/room|1/room|||||
+Orthopedic exam room|1|1|||||Cardiac arrest and other emergencies
+Orthopedic surgery|2/room|3/room|||||
+Pathology|1|1|||||Standard lab use
+Patient rooms|1/bed|1/bed|||||
+Pediatric critical care|3/bed|3/bed||1/bed|||
+Pediatric nursery|1/bassinet|1/bassinet||1/bassinet|||
+Pediatric and adolescent|1/bed|1/bed||1/bed|||
+Phase II recovery|1/bed|3/bed|||||
+Post-anesthesia care unit|1/bed|3/bed||1/bed|||
+Postpartum bedroom|1/bed|1/bed|||||
+Psychiatric patient rooms|||||||Consider anti-ligature solutions
+Seclusion room|1/bed|1/bed|||||
+Seclusion treatment room|||||||Consider anti-ligature solutions
+Surgical cystoscopy|1/room|3/room|||||
+Trauma/cardiac room|2/bed|3/bed||1/bed|||
+Triage area|1/station|1/station|||||
